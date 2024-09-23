@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f8f4ed;
+    color: #2e2e2e;
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Элементы будут выравнены по горизонтали */
+    align-items: center; /* Элементы выровнены по вертикали */
+}
+
+header {
+    background-color: #000;
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex; /* Элементы навигации в строку */
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 50px;
+}
+
+.program .btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.program .btn:hover {
+    background-color: #a7a1a1;
+}
+
+
+/* Main styling for the hero section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d1d1d; /* Dark background color */
+    padding: 50px 0;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    color: #f5e8d7; /* Light text color */
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: bold;
+    font-family: 'serif'; /* Ensure this matches your design font */
+}
+
+.hero-content p {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #d3c7b8;
+}
+
+.hero .btn {
+    background-color: transparent;
+    display: inline-block;
+    margin-top: 20px;
+    position: relative;
+}
+
+.hero .voucher {
+    color: #f7f2f2;
+    border-radius: 20px;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.4;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero .voucher img.siels {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.hero-image {
+    max-width: 45%;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+/* Основные стили для блока features */
+.features {
+    background-color: #ECD8BD; /* Оранжевый фон */
+    padding: 30px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.feature-item {
+    text-align: center;
+    flex: 1;
+}
+
+.feature-item img {
+    width: 90px; /* Устанавливаем ширину изображений 70 пикселей */
+    height: 90px; /* Устанавливаем высоту изображений 70 пикселей */
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: #0c0c0c; 
+    margin: 0;
+}
+
+/* Адаптивный дизайн для меньших экранов */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .feature-item {
+        margin-bottom: 20px;
+    }
+}
