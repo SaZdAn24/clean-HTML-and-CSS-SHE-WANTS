@@ -15,8 +15,8 @@ body {
     width: 85%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Элементы будут выравнены по горизонтали */
-    align-items: center; /* Элементы выровнены по вертикали */
+    justify-content: space-between;
+    align-items: center;
 }
 
 header {
@@ -57,26 +57,18 @@ nav ul li a {
     background-color: #a7a1a1;
 }
 
-
-/* Main styling for the hero section */
 .hero {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1d1d1d; /* Dark background color */
+    background-color: #1d1d1d;
     padding: 50px 0;
-}
-
-.container {
-    width: 85%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    overflow: visible;
 }
 
 .hero-content {
-    color: #f5e8d7; /* Light text color */
+    color: #f5e8d7;
     max-width: 50%;
 }
 
@@ -84,7 +76,7 @@ nav ul li a {
     font-size: 50px;
     line-height: 1.2;
     font-weight: bold;
-    font-family: 'serif'; /* Ensure this matches your design font */
+    font-family: 'serif';
 }
 
 .hero-content p {
@@ -121,26 +113,35 @@ nav ul li a {
     border-radius: 50%;
 }
 
+.hero-image-wrapper {
+    position: relative;
+}
+
 .hero-image {
-    max-width: 45%;
+    position: absolute;
+    bottom: 100px;
+    top: -250px;
+    right: -120px;
+    width: 800px;
+    height: auto;
+    z-index: 2;
 }
 
-.hero-image img {
-    width: 100%;
-    border-radius: 10px;
-}
-/* Основные стили для блока features */
+/* Стили для блока features */
 .features {
-    background-color: #ECD8BD; /* Оранжевый фон */
+    background-color: #ECD8BD;
     padding: 30px 0;
+    position: relative;
+    z-index: 1; /* z-index блока features должен быть меньше, чем у изображения */
 }
 
-.container {
+.features .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 85%;
-    margin: 0 auto;
+    width: 50%;
+    margin-left: 0;
+    padding-left: 30px;
 }
 
 .feature-item {
@@ -149,23 +150,86 @@ nav ul li a {
 }
 
 .feature-item img {
-    width: 90px; /* Устанавливаем ширину изображений 70 пикселей */
-    height: 90px; /* Устанавливаем высоту изображений 70 пикселей */
+    width: 90px;
+    height: 90px;
     margin-bottom: 10px;
 }
 
 .feature-item p {
     font-size: 16px;
-    color: #0c0c0c; 
+    color: #0c0c0c;
     margin: 0;
 }
 
-/* Адаптивный дизайн для меньших экранов */
+/* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        position: static;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .features .container {
+        width: 100%;
+        padding-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .feature-item {
+        width: 100%;
+        text-align: left;
         margin-bottom: 20px;
+    }
+
+    .feature-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .feature-item p {
+        font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    .feature-item img {
+        width: 80px;
+        height: 80px;
     }
 }
